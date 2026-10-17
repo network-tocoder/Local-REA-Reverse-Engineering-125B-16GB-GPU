@@ -1,0 +1,2887 @@
+healthy: true
+environment_healthy: true
+scope:
+  mode: audit-wide
+  clients: []
+  providers: []
+  skill: false
+  target: null
+scope_checks[12]:
+  - name: node
+    ok: true
+    classification: healthy
+    detail: 24.20.0
+  - name: host
+    ok: true
+    classification: healthy
+    detail: ubuntu 24.04
+  - name: hopper
+    ok: false
+    classification: missing_analysis_engine
+    remediation: "Run rea setup to install Hopper, or set HOPPER_LAUNCHER_PATH."
+  - name: ghidra
+    ok: true
+    classification: healthy
+    detail: /opt/ghidra_12.1.4_PUBLIC
+  - name: ghidra-platform
+    ok: true
+    classification: healthy
+    detail: linux
+  - name: ghidra-architecture
+    ok: true
+    classification: healthy
+    detail: x64
+  - name: ghidra-installation
+    ok: true
+    classification: healthy
+    detail: /opt/ghidra_12.1.4_PUBLIC/Ghidra/application.properties
+  - name: ghidra-version
+    ok: true
+    classification: healthy
+    detail: 12.1.4
+  - name: ghidra-headless
+    ok: true
+    classification: healthy
+    detail: /opt/ghidra_12.1.4_PUBLIC/support/analyzeHeadless
+  - name: ghidra-native_decompiler
+    ok: true
+    classification: healthy
+    detail: "/opt/ghidra_12.1.4_PUBLIC/Ghidra/Features/Decompiler/os/linux_x86_64/decompile reports elf x86_64, which matches linux/x64"
+  - name: ghidra-java
+    ok: true
+    classification: healthy
+    detail: 21.0.12.1; 64-bit; JDK; /usr/lib/jvm/java-21-openjdk-amd64; accepted a 64-bit full JDK 21 or newer
+  - name: ida-registration
+    ok: false
+    classification: missing_analysis_engine
+    detail: IDA MCP registration is not configured.
+    remediation: Set REA_IDA_MCP_CONFIG to your upstream IDA MCP registration JSON; see docs/ida-provider.md.
+informational_checks: []
+providerInspections[2]:
+  - id: ghidra
+    configured: true
+    available: true
+    providerVersion: 12.1.4
+    registrationEnvironment:
+      GHIDRA_INSTALL_DIR: /opt/ghidra_12.1.4_PUBLIC
+      JAVA_HOME: /usr/lib/jvm/java-21-openjdk-amd64
+    checks[8]{name,ok,code,detail,remediation,classification}:
+      configuration,true,null,/opt/ghidra_12.1.4_PUBLIC,null,config_drift
+      platform,true,null,linux,null,unsupported_host
+      architecture,true,null,x64,null,unsupported_host
+      installation,true,null,/opt/ghidra_12.1.4_PUBLIC/Ghidra/application.properties,null,config_drift
+      version,true,null,12.1.4,null,config_drift
+      headless,true,null,/opt/ghidra_12.1.4_PUBLIC/support/analyzeHeadless,null,config_drift
+      native_decompiler,true,null,"/opt/ghidra_12.1.4_PUBLIC/Ghidra/Features/Decompiler/os/linux_x86_64/decompile reports elf x86_64, which matches linux/x64",null,config_drift
+      java,true,null,21.0.12.1; 64-bit; JDK; /usr/lib/jvm/java-21-openjdk-amd64; accepted a 64-bit full JDK 21 or newer,null,config_drift
+  - id: ida
+    configured: false
+    available: false
+    providerVersion: null
+    registrationEnvironment:
+    checks[1]{name,ok,code,detail,remediation,classification}:
+      registration,false,not_configured,IDA MCP registration is not configured.,Set REA_IDA_MCP_CONFIG to your upstream IDA MCP registration JSON; see docs/ida-provider.md.,missing_analysis_engine
+checks[12]:
+  - name: node
+    ok: true
+    classification: healthy
+    detail: 24.20.0
+  - name: host
+    ok: true
+    classification: healthy
+    detail: ubuntu 24.04
+  - name: hopper
+    ok: false
+    classification: missing_analysis_engine
+    remediation: "Run rea setup to install Hopper, or set HOPPER_LAUNCHER_PATH."
+  - name: ghidra
+    ok: true
+    classification: healthy
+    detail: /opt/ghidra_12.1.4_PUBLIC
+  - name: ghidra-platform
+    ok: true
+    classification: healthy
+    detail: linux
+  - name: ghidra-architecture
+    ok: true
+    classification: healthy
+    detail: x64
+  - name: ghidra-installation
+    ok: true
+    classification: healthy
+    detail: /opt/ghidra_12.1.4_PUBLIC/Ghidra/application.properties
+  - name: ghidra-version
+    ok: true
+    classification: healthy
+    detail: 12.1.4
+  - name: ghidra-headless
+    ok: true
+    classification: healthy
+    detail: /opt/ghidra_12.1.4_PUBLIC/support/analyzeHeadless
+  - name: ghidra-native_decompiler
+    ok: true
+    classification: healthy
+    detail: "/opt/ghidra_12.1.4_PUBLIC/Ghidra/Features/Decompiler/os/linux_x86_64/decompile reports elf x86_64, which matches linux/x64"
+  - name: ghidra-java
+    ok: true
+    classification: healthy
+    detail: 21.0.12.1; 64-bit; JDK; /usr/lib/jvm/java-21-openjdk-amd64; accepted a 64-bit full JDK 21 or newer
+  - name: ida-registration
+    ok: false
+    classification: missing_analysis_engine
+    detail: IDA MCP registration is not configured.
+    remediation: Set REA_IDA_MCP_CONFIG to your upstream IDA MCP registration JSON; see docs/ida-provider.md.
+identity:
+  cli_package_version: 6.4.0
+  expected_skill_version: "37"
+  sdk:
+    server: 2.3.1
+    client_test: 2.3.1
+    core: 2.3.1
+  catalog:
+    counts:
+      cli_commands: 127
+      mcp_tools: 170
+      mcp_prompts: 6
+    digests:
+      tools_sha256: 25802f6de8c14ba736dc61ff1cbc7c5cd738fd74426aa01338f2dd03e0911166
+      prompts_sha256: 5296f0301566cadaf89243e774512011f11045af36d48405f76a3ff9a8947ac2
+      combined_sha256: 85d80276ecacf937bf3e803b7a31748ae1a8286f556fa5cf734eef768cc7d72a
+    tools[170]:
+      - name: address_name
+        surface: official-proxy
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: address_to_file_offset
+        surface: official-proxy
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: analyze_function
+        surface: enhanced
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: analyze_javascript_application
+        surface: electron-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: analyze_swift_types
+        surface: enhanced
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: analyze_web_bundle
+        surface: browser-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: annotate_native_function
+        surface: official-proxy
+        effects:
+          mutatesTarget: true
+          mutatesSession: true
+          writesFilesystem: true
+          launchesProcess: true
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: batch_decompile
+        surface: enhanced
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: binary_overview
+        surface: enhanced
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: binary_session
+        surface: session
+        effects:
+          mutatesTarget: false
+          mutatesSession: false
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: true
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: build_call_path
+        surface: session
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: build_reconstruction_obligation_ledger
+        surface: application
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: capture_adb_screen
+        surface: adb-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: true
+          launchesProcess: true
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: false
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: false
+          open_world: true
+      - name: capture_browser_scenario
+        surface: browser-provider
+        effects:
+          mutatesTarget: true
+          mutatesSession: true
+          writesFilesystem: true
+          launchesProcess: true
+          accessesNetwork: true
+          changesUiState: true
+          mayDiscardData: true
+          idempotent: false
+        annotations:
+          read_only: false
+          destructive: true
+          idempotent: false
+          open_world: true
+      - name: capture_electron_scenario
+        surface: electron-provider
+        effects:
+          mutatesTarget: true
+          mutatesSession: true
+          writesFilesystem: true
+          launchesProcess: true
+          accessesNetwork: true
+          changesUiState: true
+          mayDiscardData: true
+          idempotent: false
+        annotations:
+          read_only: false
+          destructive: true
+          idempotent: false
+          open_world: true
+      - name: capture_native_ui_scenario
+        surface: native-provider
+        effects:
+          mutatesTarget: true
+          mutatesSession: true
+          writesFilesystem: true
+          launchesProcess: true
+          accessesNetwork: true
+          changesUiState: true
+          mayDiscardData: true
+          idempotent: false
+        annotations:
+          read_only: false
+          destructive: true
+          idempotent: false
+          open_world: true
+      - name: capture_process_scenario
+        surface: session
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: true
+          launchesProcess: true
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: false
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: false
+          open_world: true
+      - name: capture_web_screenshot
+        surface: browser-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: close_binary
+        surface: session
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: true
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: true
+          idempotent: false
+        annotations:
+          read_only: false
+          destructive: true
+          idempotent: false
+          open_world: false
+      - name: collect_adb_bugreport
+        surface: adb-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: true
+          launchesProcess: true
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: false
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: false
+          open_world: true
+      - name: comment
+        surface: official-proxy
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: compare_application_versions
+        surface: application
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: compare_artifacts
+        surface: session
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: compare_bundles
+        surface: session
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: compare_functions
+        surface: session
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: compare_javascript_export_shapes
+        surface: application
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: compare_managed_members
+        surface: application
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: compare_process_captures
+        surface: session
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: compare_source_to_bundle
+        surface: application
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: compare_web_captures
+        surface: browser-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: compare_web_screenshots
+        surface: browser-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: correlate_static_and_runtime
+        surface: session
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: current_address
+        surface: official-proxy
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: current_document
+        surface: official-proxy
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: current_procedure
+        surface: official-proxy
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: decode_android_resources
+        surface: apktool-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: true
+          launchesProcess: true
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: decode_interface_builder
+        surface: artifact-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: decompile_jeb_item
+        surface: jeb-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: demangle_swift
+        surface: native-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: true
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: discover_webmcp_tools
+        surface: browser-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: evaluate_reconstruction_coverage
+        surface: application
+        effects:
+          mutatesTarget: false
+          mutatesSession: false
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: true
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: export_evidence_bundle
+        surface: session
+        effects:
+          mutatesTarget: false
+          mutatesSession: false
+          writesFilesystem: true
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: true
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: true
+          idempotent: true
+          open_world: false
+      - name: export_web_scripts
+        surface: application
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: true
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: false
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: false
+          open_world: false
+      - name: extract_artifact
+        surface: artifact-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: true
+          launchesProcess: true
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: false
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: false
+          open_world: true
+      - name: extract_firmware
+        surface: firmware-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: true
+          launchesProcess: true
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: false
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: false
+          open_world: true
+      - name: find_changed_behavior
+        surface: session
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: find_xrefs_to_name
+        surface: enhanced
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: get_call_graph
+        surface: enhanced
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: get_evidence_bundle
+        surface: session
+        effects:
+          mutatesTarget: false
+          mutatesSession: false
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: true
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: get_navigation_context
+        surface: session
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: get_objc_classes
+        surface: enhanced
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: get_objc_protocols
+        surface: enhanced
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: goto_address
+        surface: official-proxy
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: true
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: import_evidence_bundle
+        surface: session
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: import_managed_reconstruction
+        surface: application
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: inline_comment
+        surface: official-proxy
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: inspect_adb_client
+        surface: adb-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: true
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: inspect_adb_device
+        surface: adb-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: true
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: inspect_adb_display
+        surface: adb-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: true
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: inspect_adb_package
+        surface: adb-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: true
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: inspect_adb_window
+        surface: adb-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: true
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: inspect_address_context
+        surface: session
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: inspect_analysis_view
+        surface: application
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: inspect_android_class
+        surface: android-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: true
+          launchesProcess: true
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: inspect_android_method
+        surface: android-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: true
+          launchesProcess: true
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: inspect_android_package
+        surface: android-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: true
+          launchesProcess: true
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: inspect_apktool_client
+        surface: apktool-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: true
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: inspect_artifact
+        surface: artifact-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: true
+          launchesProcess: true
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: inspect_asset_catalog
+        surface: artifact-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: true
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: inspect_binary_layout
+        surface: native-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: true
+          launchesProcess: true
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: inspect_electron_page
+        surface: electron-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: inspect_evm_interface
+        surface: artifact-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: true
+          launchesProcess: true
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: inspect_firmware_regions
+        surface: firmware-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: true
+          launchesProcess: true
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: inspect_jeb_client
+        surface: jeb-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: inspect_keyed_archive
+        surface: artifact-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: inspect_macho
+        surface: native-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: true
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: inspect_managed_artifact
+        surface: managed-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: inspect_managed_members
+        surface: managed-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: inspect_managed_native_boundaries
+        surface: managed-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: inspect_native_api
+        surface: enhanced
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: false
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: false
+          open_world: false
+      - name: inspect_native_data_type
+        surface: official-proxy
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: inspect_native_dispatch_metadata
+        surface: enhanced
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: inspect_native_instruction
+        surface: official-proxy
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: inspect_native_load_image
+        surface: official-proxy
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: inspect_pe_resources
+        surface: native-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: inspect_plist
+        surface: native-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: true
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: inspect_recorded_crash
+        surface: native-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: true
+          launchesProcess: true
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: inspect_signature
+        surface: native-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: true
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: inspect_web_event_listeners
+        surface: browser-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: inspect_web_network_capture
+        surface: browser-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: true
+          launchesProcess: true
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: inspect_web_page
+        surface: browser-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: install_adb_package
+        surface: adb-provider
+        effects:
+          mutatesTarget: true
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: true
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: false
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: false
+          open_world: true
+      - name: list_adb_devices
+        surface: adb-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: true
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: list_adb_directory
+        surface: adb-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: true
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: list_adb_features
+        surface: adb-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: true
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: list_adb_packages
+        surface: adb-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: true
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: list_adb_processes
+        surface: adb-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: true
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: list_adb_services
+        surface: adb-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: true
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: list_architectures
+        surface: native-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: true
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: list_bookmarks
+        surface: official-proxy
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: list_browser_targets
+        surface: browser-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: list_documents
+        surface: official-proxy
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: list_electron_targets
+        surface: electron-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: list_javascript_runtime_targets
+        surface: runtime-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: list_jeb_units
+        surface: jeb-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: list_names
+        surface: official-proxy
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: list_procedures
+        surface: official-proxy
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: list_segments
+        surface: official-proxy
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: list_strings
+        surface: official-proxy
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: list_unknowns
+        surface: session
+        effects:
+          mutatesTarget: false
+          mutatesSession: false
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: true
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: next_address
+        surface: official-proxy
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: observe_javascript_runtime
+        surface: runtime-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: observe_native_calls
+        surface: native-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: true
+          launchesProcess: true
+          accessesNetwork: true
+          changesUiState: true
+          mayDiscardData: false
+          idempotent: false
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: false
+          open_world: true
+      - name: observe_native_ui
+        surface: native-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: true
+          launchesProcess: true
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: observe_web_execution
+        surface: browser-provider
+        effects:
+          mutatesTarget: true
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: true
+          idempotent: false
+        annotations:
+          read_only: false
+          destructive: true
+          idempotent: false
+          open_world: true
+      - name: observe_web_session
+        surface: browser-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: open_binary
+        surface: session
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: true
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: open_jeb_project
+        surface: jeb-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: false
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: false
+          open_world: true
+      - name: prev_address
+        surface: official-proxy
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: procedure_address
+        surface: official-proxy
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: procedure_assembly
+        surface: official-proxy
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: procedure_callees
+        surface: official-proxy
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: procedure_callers
+        surface: official-proxy
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: procedure_info
+        surface: official-proxy
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: procedure_pseudo_code
+        surface: official-proxy
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: procedure_references
+        surface: official-proxy
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: project_android_application_graph
+        surface: application
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: project_apple_application_graph
+        surface: application
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: project_managed_application_graph
+        surface: application
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: pull_adb_file
+        surface: adb-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: true
+          launchesProcess: true
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: false
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: false
+          open_world: true
+      - name: pull_adb_package
+        surface: adb-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: true
+          launchesProcess: true
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: false
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: false
+          open_world: true
+      - name: push_adb_file
+        surface: adb-provider
+        effects:
+          mutatesTarget: true
+          mutatesSession: true
+          writesFilesystem: true
+          launchesProcess: true
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: false
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: false
+          open_world: true
+      - name: read_adb_logcat
+        surface: adb-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: true
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: read_adb_setting
+        surface: adb-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: true
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: read_bytes
+        surface: official-proxy
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: read_function_instructions
+        surface: official-proxy
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: reconcile_javascript_runtime
+        surface: electron-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: record_unknown
+        surface: session
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: false
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: false
+          open_world: false
+      - name: recover_javascript_sources
+        surface: application
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: true
+          launchesProcess: true
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: false
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: false
+          open_world: true
+      - name: resolve_adb_packages
+        surface: adb-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: true
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: resolve_containing_procedure
+        surface: official-proxy
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: resolve_native_call_targets
+        surface: official-proxy
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: search_android_classes
+        surface: android-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: true
+          launchesProcess: true
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: search_procedures
+        surface: official-proxy
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: search_strings
+        surface: official-proxy
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: set_address_name
+        surface: official-proxy
+        effects:
+          mutatesTarget: true
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: set_addresses_names
+        surface: official-proxy
+        effects:
+          mutatesTarget: true
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: set_bookmark
+        surface: official-proxy
+        effects:
+          mutatesTarget: true
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: set_comment
+        surface: official-proxy
+        effects:
+          mutatesTarget: true
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: set_inline_comment
+        surface: official-proxy
+        effects:
+          mutatesTarget: true
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: start_adb_activity
+        surface: adb-provider
+        effects:
+          mutatesTarget: true
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: true
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: false
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: false
+          open_world: true
+      - name: start_adb_app
+        surface: adb-provider
+        effects:
+          mutatesTarget: true
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: true
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: false
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: false
+          open_world: true
+      - name: stop_adb_app
+        surface: adb-provider
+        effects:
+          mutatesTarget: true
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: true
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: false
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: false
+          open_world: true
+      - name: trace_android_references
+        surface: android-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: true
+          launchesProcess: true
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: trace_application_feature
+        surface: application
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: trace_call_path
+        surface: enhanced
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: false
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: false
+          open_world: false
+      - name: trace_dylib_resolution
+        surface: artifact-provider
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: trace_feature
+        surface: enhanced
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: false
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: false
+          open_world: false
+      - name: trace_javascript_semantics
+        surface: application
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: trace_native_ui_action
+        surface: enhanced
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: trace_native_values
+        surface: enhanced
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: trace_web_module_imports
+        surface: application
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: true
+          launchesProcess: true
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: trace_web_source_location
+        surface: application
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: true
+          launchesProcess: true
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: true
+      - name: uninstall_adb_package
+        surface: adb-provider
+        effects:
+          mutatesTarget: true
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: true
+          accessesNetwork: true
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: false
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: false
+          open_world: true
+      - name: unset_bookmark
+        surface: official-proxy
+        effects:
+          mutatesTarget: true
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: true
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: true
+          idempotent: true
+          open_world: false
+      - name: update_unknown
+        surface: session
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: false
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: false
+          open_world: false
+      - name: verify_managed_native_boundaries
+        surface: application
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: verify_reconstruction
+        surface: session
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: verify_unknown_resolution
+        surface: session
+        effects:
+          mutatesTarget: false
+          mutatesSession: false
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: true
+          destructive: false
+          idempotent: true
+          open_world: false
+      - name: xrefs
+        surface: official-proxy
+        effects:
+          mutatesTarget: false
+          mutatesSession: true
+          writesFilesystem: false
+          launchesProcess: false
+          accessesNetwork: false
+          changesUiState: false
+          mayDiscardData: false
+          idempotent: true
+        annotations:
+          read_only: false
+          destructive: false
+          idempotent: true
+          open_world: false
+  live_server:
+    state: unknown
+    remediation: Call binary_session in the active client to inspect the running server identity.
+  installations:
+    paths[1]: /root/.npm/_npx/9b9809298fe40d2c/node_modules/.bin/rea
+    state: single
+  skill:
+    installed_version: "37"
+    installed_tool_count: 170
+    state: aligned
+    remediation: null
+  registrations[1]:
+    - client: opencode
+      config_path: /root/.config/opencode/opencode.json
+      command[4]: npx,"-y",rea-agents@6.4.0,mcp
+      state: aligned
+      remediation: null

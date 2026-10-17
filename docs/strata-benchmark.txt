@@ -1,0 +1,11 @@
+chat (100 tok): q1 90.5/83.6/82.1  q2 65.5/69.7/68.3  q3 66.4/67.1/70.0 tok/s ; first token ~0.46-0.56 s
+4K prompt: 1125.5/1123.8/1128.4 tok/s, first token ~3.6 s
+16K prompt: 1644.2/1633.6/1628.1 tok/s, first token ~9.8-9.9 s
+agent run1: turns 0-5 prompt 609->14421, reused ~ prior, first token 1.6 / 3.9 / 3.6 / 4.0 / 3.8 / 3.8 s
+== FINAL (median) RTX 5060 Ti 16GB, Qwen3.8-Flash-Next IQ3_S, 64K, KV int8 ==
+chat decode 69.70 tok/s (65.5-90.5) | chat first token 0.50 s
+4K prompt 1125.5 tok/s, first token 3.60 s | 16K prompt 1633.6 tok/s, first token 9.87 s
+agent cache hit 68.78% | agent turn first token 3.82 s | agent decode 74.20 tok/s (42.6-105.0)
+settings: --expert-cache auto --prefill auto --spec 4 --max-context 65536 --kv int8 --kv-resident 32768 --pcie-frac 0.00 --spec-min-p 0.70 --pool-workers 24 --adapt-every 1 --adapt-swaps 160 --adapt-decay 0.97
+report: bench/results/2026-10-12-community-rtx-5060-ti-qwen3-8-flash-next-iq3-s/README.md
+after fix: 128K ctx, budget 8000, expert cache 4534 experts 8.65 GiB (was 4595 / 8.76 at 64K)
